@@ -1,45 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Caio Lucas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo – Caio Lucas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <header>
-            <h1>Caio Lucas da Silva Nascimento</h1>
-            <p><strong>Objetivo:</strong> Programador e Desenvolvedor</p>
-        </header>
-        <!--<img src="assets/img/1718582608204.jpeg">-->
-    </section>
-    <section>
-        <ul>
-            <h2>Informações Pessoais</h2>
-            <li>Data de Nascimento: 23/03/2007</li>
-            <li>Masculino</li>
-        </ul>
-    </section>
-    <section>
-        <ul>
-            <h2>Informações de Contato</h2>
-            <li>Email: caiolucas.sn@gmail.com</li>
-            <li>Telefone: 27 99667-5076</li>
-            <li>
-                <a href="https://www.linkedin.com/in/caiolucasnascimento/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/CaioLucas355" target="_blank">GitHub</a>
-            </li>
-        </ul>
-    </section>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>Caio Lucas da Silva Nascimento</h1>
+    <p class="objetivo">Objetivo: Programador e Desenvolvedor</p>
+  </header>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+    </ul>
+  </nav>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="page-wrapper">
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+      <!-- Resumo Profissional -->
+      <section id="sobre" class="section-card">
         <h2>Resumo Profissional</h2>
         <p>
-            Sou estudante de Sistemas de Informação no Instituto Federal do Espírito Santo, gosto de aprender coisas novas e resolver problemas. 
-            Atualmente estou praticando o uso de HTML na criação de Sites, o desenvolvimento programas de busca e ordenação e também técnicas de resolução de problemas
-            
+          Sou estudante de Sistemas de Informação no Instituto Federal do Espírito Santo.
+          Gosto de aprender coisas novas e resolver problemas. Atualmente estou praticando
+          o uso de HTML na criação de sites, o desenvolvimento de programas de busca e
+          ordenação e também técnicas de resolução de problemas.
         </p>
+      </section>
+
+      <!-- Informações Pessoais -->
+      <section id="pessoais" class="section-card">
+        <h2>Informações Pessoais</h2>
+        <ul>
+          <li>Data de Nascimento: 23/03/2007</li>
+          <li>Gênero: Masculino</li>
+        </ul>
+      </section>
+
+      <!-- Experiência Profissional -->
+      <section id="experiencia" class="section-card">
         <h2>Experiência Profissional</h2>
-        <p>
-           Nenhuma oficialmente
-        </p>
+        <p>Nenhuma experiência formal registrada até o momento. Em busca da primeira oportunidade.</p>
+      </section>
+
+      <!-- Habilidades (Grid) -->
+      <section id="habilidades" class="section-card">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">HTML</div>
+          <div class="skill-tag">CSS</div>
+          <div class="skill-tag">C#</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">Algoritmos</div>
+          <div class="skill-tag">Git / GitHub</div>
+          <div class="skill-tag">Resolução de Problemas</div>
+          <div class="skill-tag">Lógica de Programação</div>
+        </div>
+      </section>
+
+      <!-- Cursos (Grid) -->
+      <section id="cursos" class="section-card">
+        <h2>Cursos e Formação</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">Sistemas de Informação – IFES</div>
+          <div class="skill-tag">Desenvolvimento Web</div>
+          <div class="skill-tag">Algoritmos e Estruturas de Dados</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ASIDE – Contato -->
+    <aside class="site-aside">
+
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li>
+            <strong>E-mail</strong>
+            caiolucas.sn@gmail.com
+          </li>
+          <li>
+            <strong>Telefone</strong>
+            (27) 99667-5076
+          </li>
+          <li>
+            <strong>Localização</strong>
+            Espírito Santo, Brasil
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Redes</h3>
+        <div class="aside-links">
+          <a href="https://www.linkedin.com/in/caiolucasnascimento/" target="_blank">
+            🔗 LinkedIn
+          </a>
+          <a href="https://github.com/CaioLucas355" target="_blank">
+            🐙 GitHub
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Idiomas</h3>
+        <ul>
+          <li><strong>Português</strong> Nativo</li>
+          <li><strong>Inglês</strong> Nível intermediário a intermediário-avançado (B1/B2) </li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 <span>Caio Lucas da Silva Nascimento</span> — Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>

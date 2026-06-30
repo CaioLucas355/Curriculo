@@ -1,0 +1,319 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-page:       #F0F4F8;
+  --bg-card:       #FFFFFF;
+  --bg-header:     #1A2B45;
+  --bg-aside:      #243B57;
+  --bg-footer:     #1A2B45;
+
+  --accent:        #3B9EDB;
+  --accent-hover:  #2A7FBB;
+
+  --text-primary:  #1A2B45;
+  --text-light:    #F0F4F8;
+  --text-muted:    #6B7A8D;
+  --text-aside:    #BFD5EA;
+
+  --border:        #D1DCE8;
+
+  --font-display:  'Segoe UI', system-ui, sans-serif;
+  --font-body:     Georgia, 'Times New Roman', serif;
+
+  --radius:        8px;
+  --shadow:        0 2px 12px rgba(26,43,69,0.10);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header.site-header {
+  background-color: var(--bg-header);
+  color: var(--text-light);
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+}
+
+header.site-header h1 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3rem;
+}
+
+header.site-header .objetivo {
+  font-size: 1rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+/* ===========================
+   NAV (menu de navegação)
+=========================== */
+nav.site-nav {
+  background-color: #152236;
+  padding: 0.5rem 2rem;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav.site-nav ul li a {
+  color: var(--text-aside);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+
+nav.site-nav ul li a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* ===========================
+   LAYOUT PRINCIPAL (Flexbox)
+=========================== */
+.page-wrapper {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  max-width: 1100px;
+  margin: 2rem auto;
+  width: 100%;
+  padding: 0 1.5rem;
+  align-items: flex-start;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+/* ===========================
+   SEÇÕES DO CURRÍCULO
+=========================== */
+.section-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem 2rem;
+  border-left: 4px solid var(--accent);
+}
+
+.section-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-card p,
+.section-card li {
+  font-size: 0.97rem;
+  color: #334155;
+}
+
+.section-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.section-card ul li::before {
+  content: "▸ ";
+  color: var(--accent);
+  font-size: 0.85em;
+}
+
+/* ===========================
+   GRID – HABILIDADES
+=========================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background-color: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  background-color: #E8F4FD;
+}
+
+/* ===========================
+   ASIDE (barra lateral)
+=========================== */
+aside.site-aside {
+  width: 260px;
+  min-width: 220px;
+  background-color: var(--bg-aside);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem 1.5rem;
+  margin-left: 1.5rem;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+aside.site-aside h3 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+aside.site-aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside.site-aside ul li {
+  font-size: 0.88rem;
+  color: var(--text-aside);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+aside.site-aside ul li strong {
+  display: block;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.1rem;
+}
+
+aside.site-aside .aside-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside.site-aside .aside-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+aside.site-aside .aside-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer.site-footer {
+  background-color: var(--bg-footer);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1.2rem 2rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  margin-top: auto;
+}
+
+footer.site-footer span {
+  color: var(--accent);
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  aside.site-aside {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  header.site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
